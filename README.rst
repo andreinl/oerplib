@@ -78,7 +78,7 @@ It should work on next versions if `Odoo` keeps a stable API.
 Supported Python versions
 -------------------------
 
-`OERPLib` support Python versions 2.6, 2.7.
+`OERPLib` support Python versions 2.6, 2.7, 3.x (Tested on Python 3.6)
 
 License
 -------

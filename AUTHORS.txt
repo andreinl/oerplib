@@ -1,3 +1,7 @@
 Original Author
 ---------------
 Sébastien Alix <sebastien.alix@osiell.com>, <seb@usr-src.org>
+
+Port to Python 3
+----------------
+Andrei Levin <andrei.levin@didotech.com>

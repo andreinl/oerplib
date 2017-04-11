@@ -1,3 +1,7 @@
+0.9.0
+=====
+- NEW: Compatibility with Python 3.x
+
 0.8.4
 =====
 - FIX: Auto-discovery the Odoo version via HTTPS (fixes #9)

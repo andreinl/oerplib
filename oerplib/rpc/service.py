@@ -19,7 +19,11 @@
 #
 ##############################################################################
 
-import xmlrpclib
+import sys
+if sys.version_info[0] == 2:
+    import xmlrpclib
+else:
+    import xmlrpc.client as xmlrpclib
 
 from oerplib.rpc import netrpclib, xmlrpclib_custom, error
 

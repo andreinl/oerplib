@@ -23,7 +23,11 @@ in `OERPLib`.
 """
 import os
 import stat
-from ConfigParser import SafeConfigParser
+import sys
+if sys.version_info[0] == 2:
+    from ConfigParser import SafeConfigParser
+else:
+    from configparser import ConfigParser as SafeConfigParser
 
 from oerplib import error
 

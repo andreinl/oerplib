@@ -19,11 +19,18 @@
 #
 ##############################################################################
 
-import xmlrpclib
-import httplib
-import socket
 import sys
-from urlparse import urlparse
+if sys.version_info[0] == 2:
+    import xmlrpclib
+    import httplib
+    from urlparse import urlparse
+else:
+    import xmlrpc.client as xmlrpclib
+    import http.client as httplib
+    from urllib.parse import urlparse
+
+import socket
+
 
 # Defined later following the version of Python used
 TimeoutTransport = None  

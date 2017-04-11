@@ -4,7 +4,7 @@ import os
 from distutils.core import setup
 
 name = 'OERPLib'
-version = '0.8.4'
+version = '0.9.0'
 description = ("OERPLib is a Python module providing an easy way to "
                "pilot your OpenERP and Odoo servers through RPC.")
 keywords = ("openerp odoo server client xml-rpc xmlrpc net-rpc netrpc "
@@ -38,33 +38,37 @@ except Exception:
     print("No Sphinx module found. You have to install Sphinx "
           "to be able to generate the documentation.")
 
-setup(name=name,
-      version=version,
-      description=description,
-      long_description=open('README.rst').read(),
-      keywords=keywords,
-      author=author,
-      author_email=author_email,
-      url=url,
-      download_url=download_url,
-      packages=['oerplib',
-                'oerplib.rpc',
-                'oerplib.service',
-                'oerplib.service.osv',
-                'oerplib.service.inspect',
-                'oerplib.tools'],
-      license=license,
-      cmdclass=cmdclass,
-      command_options=command_options,
-      classifiers=[
-          "Intended Audience :: Developers",
-          "Programming Language :: Python",
-          "Programming Language :: Python :: 2.6",
-          "Programming Language :: Python :: 2.7",
-          "Programming Language :: Python :: Implementation :: CPython",
-          "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
-          "Topic :: Software Development :: Libraries :: Python Modules",
-      ],
-      )
+setup(
+    name=name,
+    version=version,
+    description=description,
+    long_description=open('README.rst').read(),
+    keywords=keywords,
+    author=author,
+    author_email=author_email,
+    url=url,
+    download_url=download_url,
+    packages=[
+        'oerplib',
+        'oerplib.rpc',
+        'oerplib.service',
+        'oerplib.service.osv',
+        'oerplib.service.inspect',
+        'oerplib.tools'
+    ],
+    license=license,
+    cmdclass=cmdclass,
+    command_options=command_options,
+    classifiers=[
+        "Intended Audience :: Developers",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2.6",
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ],
+)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

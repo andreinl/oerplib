@@ -105,7 +105,7 @@ class Model(object):
         cls_name = self._name.replace('.', '_')
         # Encode the class name for the Python2 'type()' function.
         # No need to do this for Python3.
-        if type(cls_name) == unicode and sys.version_info < (3,):
+        if sys.version_info[0] == 2 and type(cls_name) == unicode:
             cls_name = cls_name.encode('utf-8')
         cls_fields = {}
         for field_name, field_data in fields_get.items():
@@ -165,7 +165,8 @@ class Model(object):
         obj_data['context'] = context
         # Get basic fields (no relational ones)
         basic_fields = []
-        for field_name, field in obj.__osv__['columns'].iteritems():
+        # TODO: test it with Python 2
+        for field_name, field in obj.__osv__['columns'].items():
             if not getattr(field, 'relation', False):
                 basic_fields.append(field_name)
             else:
