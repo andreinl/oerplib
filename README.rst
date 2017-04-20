@@ -5,11 +5,11 @@ OERPLib
 
 .. image:: https://pypip.in/download/OERPLib/badge.svg
     :target: https://pypi.python.org/pypi/OERPLib/
-    :alt: Downloads
+    :alt: Downloads Official version compatible with Python 2.x
 
 .. image:: https://pypip.in/version/OERPLib/badge.svg
     :target: https://pypi.python.org/pypi/OERPLib/
-    :alt: Latest Version
+    :alt: Latest Version for Python 2.x
 
 .. image:: https://pypip.in/license/OERPLib/badge.svg
     :target: https://pypi.python.org/pypi/OERPLib/

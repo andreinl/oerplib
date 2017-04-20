@@ -133,6 +133,9 @@ class BrowseRecordIterator(object):
             self.index += 1
             return self.model.browse(id_, context=self.context)
 
+    def __next__(self):
+        return self.next()
+
     def __iadd__(self, records):
         if not self.parent or not self.parent_field:
             raise error.InternalError("No parent record to update")
