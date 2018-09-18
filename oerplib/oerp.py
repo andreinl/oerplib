@@ -192,7 +192,7 @@ class OERP(object):
         if not self._uid or not self._password:
             raise error.Error(u"User login required.")
 
-    def login(self, user='admin', passwd='admin', database=None):
+    def login(self, user='admin', passwd='admin', database=None, user_browse=True):
         """Log in as the given `user` with the password `passwd` on the
         database `database` and return the corresponding user as a browsable
         record (from the ``res.users`` model).
@@ -218,8 +218,12 @@ class OERP(object):
             if user_id:
                 self._uid = user_id
                 self._password = passwd
-                self._context = self.execute('res.users', 'context_get')
-                self._user = self.browse('res.users', user_id, self._context)
+                self._context = {}
+                if not user_browse:
+                    self._context = self.execute('res.users', 'context_get')
+                    self._user = type('usertmp', (object,), {'id': user_id})()
+                else:
+                    self._user = self.browse('res.users', user_id, self._context)
                 return self._user
             else:
                 #FIXME: Raise an error?
