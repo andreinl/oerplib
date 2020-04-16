@@ -28,7 +28,7 @@ import re
 MATCH_VERSION = re.compile(r'[^\d.]')
 
 
-class Config(collections.MutableMapping):
+class Config(collections.abc.MutableMapping):
     """Class which manage the configuration of an
     :class:`OERP <oerplib.OERP>` instance.
 

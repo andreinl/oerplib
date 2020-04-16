@@ -15,6 +15,9 @@ OERPLib
     :target: https://pypi.python.org/pypi/OERPLib/
     :alt: License
 
+You can download a version compatible with Python 3.x here.
+Just clone this repository and use py3x branch.
+
 **OERPLib** is a Python module providing an easy way to
 pilot your **OpenERP** and **Odoo** servers through `RPC`.
 
